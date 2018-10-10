@@ -73,6 +73,7 @@ public class GalleryFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(),3);
         recyclerView.setLayoutManager(layoutManager);
 
+
         ArrayList<CreateList> createLists = prepareData();
         MyAdapter adapter = new MyAdapter(getActivity(), createLists);
         recyclerView.setAdapter(adapter);
