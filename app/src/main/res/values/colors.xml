@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_name_initials_background">#E2E2E2</color>
+    <color name="color_name_initials_text">#9A9A9A</color>
+    <color name="color_name_text_client_message">#F1F1F1</color>
+    <color name="color_name_text_my_message">#E9E9E9</color>
+    <color name="color_light_grey">#E2E2E2</color>
+</resources>
