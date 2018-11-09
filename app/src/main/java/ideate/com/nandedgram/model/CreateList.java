@@ -1,4 +1,4 @@
-package ideate.com.nandedgram;
+package ideate.com.nandedgram.model;
 
 /**
  * Created by rushd on 29/09/2016.

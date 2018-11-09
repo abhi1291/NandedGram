@@ -15,8 +15,8 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-import ideate.com.nandedgram.CreateList;
-import ideate.com.nandedgram.MyAdapter;
+import ideate.com.nandedgram.model.CreateList;
+import ideate.com.nandedgram.adapter.MyAdapter;
 import ideate.com.nandedgram.R;
 
 public class GalleryFragment extends Fragment {

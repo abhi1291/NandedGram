@@ -1,4 +1,4 @@
-package ideate.com.nandedgram;
+package ideate.com.nandedgram.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import ideate.com.nandedgram.ContactFragment.OnListFragmentInteractionListener;
+import ideate.com.nandedgram.R;
+import ideate.com.nandedgram.fragment.ContactFragment.OnListFragmentInteractionListener;
 import ideate.com.nandedgram.dummy.DummyContent.DummyItem;
 import ideate.com.nandedgram.model.Contact;
 

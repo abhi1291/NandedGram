@@ -1,4 +1,4 @@
-package ideate.com.nandedgram;
+package ideate.com.nandedgram.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,12 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import ideate.com.nandedgram.dummy.DummyContent;
+import ideate.com.nandedgram.adapter.ContactItemRecyclerViewAdapter;
+import ideate.com.nandedgram.R;
 import ideate.com.nandedgram.dummy.DummyContent.DummyItem;
 import ideate.com.nandedgram.model.Contact;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 /**

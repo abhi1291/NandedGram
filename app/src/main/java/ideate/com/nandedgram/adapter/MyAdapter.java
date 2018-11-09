@@ -1,4 +1,4 @@
-package ideate.com.nandedgram;
+package ideate.com.nandedgram.adapter;
 
 
 import android.content.Context;
@@ -12,6 +12,9 @@ import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import ideate.com.nandedgram.model.CreateList;
+import ideate.com.nandedgram.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private ArrayList<CreateList> galleryList;
