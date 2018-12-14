@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,6 +38,7 @@ public class HomeFragment extends Fragment {
     TextView male, female, total;
     ValueAnimator animator;
     DonutProgress maleProgress, femaleProgress, totalProgress;
+    FrameLayout pagerLayout;
     LinearLayout llExecutiveBoard,llComplainSuggestion,llServiceAndCharges,llEmerengencyContact;
     final Handler handler = new Handler();
     private final Integer image_ids[] = {
@@ -137,6 +139,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void setGradiant(View view) {
+
         llExecutiveBoard= view.findViewById(R.id.llExecutiveBoard);
         llExecutiveBoard.setBackground(getGradiant(GradientDrawable.RECTANGLE, R.color.color_item_bacground,
                 new float[]{Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10) ,0, 0}));
@@ -154,11 +157,14 @@ public class HomeFragment extends Fragment {
         llEmerengencyContact.setBackground(getGradiant(GradientDrawable.RECTANGLE, R.color.color_item_bacground,
                 new float[]{Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10),0, 0, Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10),  Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10)}));
 
+        mPager.setBackground(getGradiantRedBorder(GradientDrawable.RECTANGLE, R.color.white,
+                new float[]{Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10)}));
+
 
     }
 
     private void intiit(View view) {
-
+        pagerLayout=view.findViewById(R.id.fm_pager_layout);
         male = view.findViewById(R.id.home_text_male);
         female = view.findViewById(R.id.home_text_female);
         total = view.findViewById(R.id.home_text_total);
@@ -170,6 +176,14 @@ public class HomeFragment extends Fragment {
     }
 
     private GradientDrawable getGradiant(int sahpe, int color, float[] cornorPosition) {
+        GradientDrawable innerBlackShape = new GradientDrawable();
+        innerBlackShape.setShape(sahpe);
+        innerBlackShape.setColor(getResources().getColor(color));
+        innerBlackShape.setCornerRadii(cornorPosition);
+        innerBlackShape.setStroke(5,getResources().getColor(R.color.white));
+        return innerBlackShape;
+    }
+    private GradientDrawable getGradiantRedBorder(int sahpe, int color, float[] cornorPosition) {
         GradientDrawable innerBlackShape = new GradientDrawable();
         innerBlackShape.setShape(sahpe);
         innerBlackShape.setColor(getResources().getColor(color));

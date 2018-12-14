@@ -9,6 +9,7 @@
     <color name="color_name_text_client_message">#F1F1F1</color>
     <color name="color_name_text_my_message">#ff9d41</color>
     <color name="color_light_grey">#E2E2E2</color>
-    <color name="color_item_bacground" >#feb001</color>
+    <color name="color_item_bacground" >#ff9d41</color>
     <color name="color_item_border" >#FF6D00</color>
+    <color name="white">#FFFFFF</color>
 </resources>
