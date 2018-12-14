@@ -1,4 +1,4 @@
-package ideate.com.nandedgram.model;
+package ideate.com.nandedgram.contact;
 
 public class Contact {
     private String designation;

@@ -1,4 +1,4 @@
-package ideate.com.nandedgram.dummy;
+package ideate.com.nandedgram.Gallery;
 
 import java.util.ArrayList;
 import java.util.HashMap;

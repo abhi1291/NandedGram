@@ -1,4 +1,4 @@
-package ideate.com.nandedgram.fragment;
+package ideate.com.nandedgram.contact;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,10 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import ideate.com.nandedgram.adapter.ContactItemRecyclerViewAdapter;
 import ideate.com.nandedgram.R;
-import ideate.com.nandedgram.dummy.DummyContent.DummyItem;
-import ideate.com.nandedgram.model.Contact;
+import ideate.com.nandedgram.Gallery.DummyContent.DummyItem;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -85,7 +83,7 @@ public class ContactFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new ContactItemRecyclerViewAdapter(contactsList,getActivity()));
+            recyclerView.setAdapter(new AdapterContactList(contactsList,getActivity()));
         }
         return view;
     }

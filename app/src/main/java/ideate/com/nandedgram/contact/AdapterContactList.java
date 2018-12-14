@@ -1,4 +1,4 @@
-package ideate.com.nandedgram.adapter;
+package ideate.com.nandedgram.contact;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,9 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import ideate.com.nandedgram.R;
-import ideate.com.nandedgram.fragment.ContactFragment.OnListFragmentInteractionListener;
-import ideate.com.nandedgram.dummy.DummyContent.DummyItem;
-import ideate.com.nandedgram.model.Contact;
+import ideate.com.nandedgram.contact.ContactFragment.OnListFragmentInteractionListener;
+import ideate.com.nandedgram.Gallery.DummyContent.DummyItem;
 
 import java.util.ArrayList;
 
@@ -20,12 +19,12 @@ import java.util.ArrayList;
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class ContactItemRecyclerViewAdapter extends RecyclerView.Adapter<ContactItemRecyclerViewAdapter.MyViewHolder> {
+public class AdapterContactList extends RecyclerView.Adapter<AdapterContactList.MyViewHolder> {
 
     ArrayList<Contact> contactList;
     private Context mContext;
 
-    public ContactItemRecyclerViewAdapter(ArrayList<Contact> contactList, Activity context) {
+    public AdapterContactList(ArrayList<Contact> contactList, Activity context) {
         this.contactList = contactList;
         this.mContext = context;
         setHasStableIds(true);

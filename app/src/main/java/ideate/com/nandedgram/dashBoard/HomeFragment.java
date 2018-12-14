@@ -1,11 +1,11 @@
-package ideate.com.nandedgram.fragment;
+package ideate.com.nandedgram.dashBoard;
 
 import android.animation.ValueAnimator;
 import android.app.Activity;
+
+import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,8 +24,8 @@ import java.util.TimerTask;
 
 import UIComponent.DonutProgress;
 import ideate.com.nandedgram.R;
-import ideate.com.nandedgram.adapter.SliderAdapter;
 import me.relex.circleindicator.CircleIndicator;
+import util.Util;
 
 public class HomeFragment extends Fragment {
     private String TAG = "Demo";
@@ -36,6 +37,7 @@ public class HomeFragment extends Fragment {
     TextView male, female, total;
     ValueAnimator animator;
     DonutProgress maleProgress, femaleProgress, totalProgress;
+    LinearLayout llExecutiveBoard,llComplainSuggestion,llServiceAndCharges,llEmerengencyContact;
     final Handler handler = new Handler();
     private final Integer image_ids[] = {
             R.drawable.img1,
@@ -45,7 +47,7 @@ public class HomeFragment extends Fragment {
 
 
     };
-
+    ViewPager mPager;
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -66,7 +68,7 @@ public class HomeFragment extends Fragment {
                 container, false);
 
         intiit(view);
-        final ViewPager mPager = (ViewPager) view.findViewById(R.id.pager);
+         mPager = (ViewPager) view.findViewById(R.id.pager);
 
 
         ArrayList<Integer> imageList = new ArrayList<>();
@@ -78,6 +80,15 @@ public class HomeFragment extends Fragment {
 
         indicator.setViewPager(mPager);
 
+        setGradiant(view);
+
+        setDashBordAnimAtion();
+
+
+        return view;
+    }
+
+    private void setDashBordAnimAtion() {
         animator = ValueAnimator.ofInt(0, 4907);
         animator.setDuration(3000);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -123,9 +134,27 @@ public class HomeFragment extends Fragment {
                 }
             }, 2500, 2500);
         }
+    }
+
+    private void setGradiant(View view) {
+        llExecutiveBoard= view.findViewById(R.id.llExecutiveBoard);
+        llExecutiveBoard.setBackground(getGradiant(GradientDrawable.RECTANGLE, R.color.color_item_bacground,
+                new float[]{Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10) ,0, 0}));
 
 
-        return view;
+        llComplainSuggestion= view.findViewById(R.id.llComplainSuggestion);
+        llComplainSuggestion.setBackground(getGradiant(GradientDrawable.RECTANGLE, R.color.color_item_bacground,
+                new float[]{Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), 0, 0, Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10)}));
+
+        llServiceAndCharges= view.findViewById(R.id.llServiceAndCharges);
+        llServiceAndCharges.setBackground(getGradiant(GradientDrawable.RECTANGLE, R.color.color_item_bacground,
+                new float[]{0,0,Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10)}));
+
+        llEmerengencyContact= view.findViewById(R.id.llEmerengencyContact);
+        llEmerengencyContact.setBackground(getGradiant(GradientDrawable.RECTANGLE, R.color.color_item_bacground,
+                new float[]{Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10),0, 0, Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10),  Util.convertDpToPx(view.getContext(), 10), Util.convertDpToPx(view.getContext(), 10)}));
+
+
     }
 
     private void intiit(View view) {
@@ -139,4 +168,14 @@ public class HomeFragment extends Fragment {
 
 
     }
+
+    private GradientDrawable getGradiant(int sahpe, int color, float[] cornorPosition) {
+        GradientDrawable innerBlackShape = new GradientDrawable();
+        innerBlackShape.setShape(sahpe);
+        innerBlackShape.setColor(getResources().getColor(color));
+        innerBlackShape.setCornerRadii(cornorPosition);
+        innerBlackShape.setStroke(5,getResources().getColor(R.color.color_item_border));
+        return innerBlackShape;
+    }
+
 }

@@ -7,6 +7,8 @@
     <color name="color_name_initials_background">#E2E2E2</color>
     <color name="color_name_initials_text">#9A9A9A</color>
     <color name="color_name_text_client_message">#F1F1F1</color>
-    <color name="color_name_text_my_message">#E9E9E9</color>
+    <color name="color_name_text_my_message">#ff9d41</color>
     <color name="color_light_grey">#E2E2E2</color>
+    <color name="color_item_bacground" >#feb001</color>
+    <color name="color_item_border" >#FF6D00</color>
 </resources>

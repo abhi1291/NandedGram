@@ -1,4 +1,4 @@
-package ideate.com.nandedgram.activity;
+package ideate.com.nandedgram.dashBoard;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,10 +16,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import ideate.com.nandedgram.R;
-import ideate.com.nandedgram.dummy.DummyContent;
-import ideate.com.nandedgram.fragment.ContactFragment;
-import ideate.com.nandedgram.fragment.GalleryFragment;
-import ideate.com.nandedgram.fragment.HomeFragment;
+import ideate.com.nandedgram.Gallery.DummyContent;
+import ideate.com.nandedgram.contact.ContactFragment;
+import ideate.com.nandedgram.Gallery.GalleryFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,ContactFragment.OnListFragmentInteractionListener {
     FragmentManager fragmentManager;

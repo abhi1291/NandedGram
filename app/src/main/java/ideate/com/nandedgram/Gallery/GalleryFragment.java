@@ -1,4 +1,4 @@
-package ideate.com.nandedgram.fragment;
+package ideate.com.nandedgram.Gallery;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -15,8 +15,6 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-import ideate.com.nandedgram.model.CreateList;
-import ideate.com.nandedgram.adapter.MyAdapter;
 import ideate.com.nandedgram.R;
 
 public class GalleryFragment extends Fragment {
@@ -75,7 +73,7 @@ public class GalleryFragment extends Fragment {
 
 
         ArrayList<CreateList> createLists = prepareData();
-        MyAdapter adapter = new MyAdapter(getActivity(), createLists);
+        AdapterGallery adapter = new AdapterGallery(getActivity(), createLists);
         recyclerView.setAdapter(adapter);
         return view;
     }
