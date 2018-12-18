@@ -13,4 +13,6 @@
     <string name="total_voting">Total Voting</string>
     <string name="female">Female Voting</string>
     <string name="male_voting">Male Voting</string>
+    <string name="collapsed">collapsed: %s</string>
+    <string name="expanded">expanded: %s</string>
 </resources>

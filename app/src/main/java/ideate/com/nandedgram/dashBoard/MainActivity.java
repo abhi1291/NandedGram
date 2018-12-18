@@ -19,6 +19,8 @@ import ideate.com.nandedgram.R;
 import ideate.com.nandedgram.Gallery.DummyContent;
 import ideate.com.nandedgram.contact.ContactFragment;
 import ideate.com.nandedgram.Gallery.GalleryFragment;
+import ideate.com.nandedgram.contact.contactExpandable.ContactActivity;
+import util.Util;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,ContactFragment.OnListFragmentInteractionListener {
     FragmentManager fragmentManager;
@@ -134,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            Util.openActivity(this,ContactActivity.class);
 
         } else if (id == R.id.nav_slideshow) {
 

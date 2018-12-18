@@ -54,8 +54,6 @@ import ideate.com.nandedgram.R;
 public class Util {
 
 
-
-
     public static boolean checkPermission(Context context, String permission) {
         return (ContextCompat.checkSelfPermission(context,
                 permission) == PackageManager.PERMISSION_GRANTED);
@@ -88,9 +86,6 @@ public class Util {
     }
 
 
-
-
-
     public static Snackbar showSnackBar(View coordinatorLayout, String message, int duration) {
         Snackbar snackbar = Snackbar.make(coordinatorLayout, message, duration);
         snackbar.getView().setBackgroundColor(coordinatorLayout.getContext().getResources().getColor(R.color.colorPrimary));
@@ -98,7 +93,6 @@ public class Util {
         return snackbar;
 
     }
-
 
 
     public static void showSnackbarMessageDialog(CoordinatorLayout coordinatorLayout, String snackbarMessage) {
@@ -123,7 +117,7 @@ public class Util {
 
     }
 
-        /* Method for detecting softkeyboard event*/
+    /* Method for detecting softkeyboard event*/
 
 
     public static float dp2px(Resources resources, float dp) {
@@ -205,14 +199,24 @@ public class Util {
     }
 
 
+    /*    public static SimpleDateFormat getAccountDateFormat(Pref mPref) {
+            SimpleDateFormat mSimpleDateFormatToShow = new SimpleDateFormat("MM/dd/yyyy", Locale.US);
+            if (!mPref.getString(Pref.USER_DATE_FORMAT).trim().equals("")) {
+                mSimpleDateFormatToShow = new SimpleDateFormat(mPref.getString(Pref.USER_DATE_FORMAT).trim(), Locale.US);
+            }
+            return mSimpleDateFormatToShow;
+        }*/
+    public static void openActivity(Activity source, Class<?> destination) {
+        Intent openClass = new Intent(source, destination);
+        source.startActivity(openClass);
+        // source.overridePendingTransition(R.anim.right_in, R.anim.left_out);
+        /*if (Util.isLollipop()) {
+            ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(source, view, mTransitionName);
+            source.startActivity(openClass, transitionActivityOptions.toBundle());
+        } else {
 
-/*    public static SimpleDateFormat getAccountDateFormat(Pref mPref) {
-        SimpleDateFormat mSimpleDateFormatToShow = new SimpleDateFormat("MM/dd/yyyy", Locale.US);
-        if (!mPref.getString(Pref.USER_DATE_FORMAT).trim().equals("")) {
-            mSimpleDateFormatToShow = new SimpleDateFormat(mPref.getString(Pref.USER_DATE_FORMAT).trim(), Locale.US);
-        }
-        return mSimpleDateFormatToShow;
-    }*/
+        }*/
+    }
 
     public static boolean validateDate(String date) {
         if (TextUtils.isEmpty(date) || TextUtils.equals("0000-00-00 00:00:00", date)) {
@@ -248,6 +252,7 @@ public class Util {
         } catch (Throwable ignored) {
         }
     }
+
     /**
      * This method used to convert dp values into pixels value
      *
@@ -258,13 +263,15 @@ public class Util {
         return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 dp, context.getResources().getDisplayMetrics()));
     }
+
     /**
      * Added By Shree
      * For AGL-246
+     *
      * @return default last part of the key
      */
-    public static String getResourceKey(){
-        String keyLast="CZO";
+    public static String getResourceKey() {
+        String keyLast = "CZO";
         return keyLast;
     }
 

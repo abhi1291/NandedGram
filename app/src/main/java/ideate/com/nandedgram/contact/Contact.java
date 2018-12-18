@@ -1,8 +1,16 @@
 package ideate.com.nandedgram.contact;
 
 public class Contact {
+
     private String designation;
 
+    public Contact(String name,String mobileNumber,String designation) {
+        this.designation=designation;
+        this.name=name;
+        this.phoneNumber=mobileNumber;
+    }
+    public Contact() {
+    }
     public String getDesignation() {
         return designation;
     }

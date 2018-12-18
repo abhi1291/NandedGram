@@ -71,15 +71,16 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:padding="5dp"
+
                 android:elevation="3dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     app:srcCompat="@drawable/ic_execetive_board" />
 
                 <TextView
@@ -98,15 +99,15 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:gravity="center"
                 android:elevation="3dp"
                 android:padding="5dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     app:srcCompat="@drawable/ic_suggestion" />
 
                 <TextView
@@ -132,15 +133,15 @@
                 android:layout_width="0dp"
                 android:padding="5dp"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:elevation="3dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     app:srcCompat="@drawable/ic_coins" />
 
                 <TextView
@@ -159,15 +160,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:elevation="3dp"
                 android:padding="5dp"
                 android:orientation="vertical"
                 >
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     app:srcCompat="@drawable/ic_emergency_contact" />
 
                 <TextView
@@ -215,8 +216,8 @@
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp">
+                    android:layout_width="45dp"
+                    android:layout_height="45dp">
 
                     <UIComponent.DonutProgress
                         android:id="@+id/home_circular_male"
@@ -233,7 +234,7 @@
                     <ImageView
                         android:id="@+id/home_img_male"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="25dp"
 
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/ic_male" />
@@ -266,8 +267,8 @@
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp">
+                    android:layout_width="45dp"
+                    android:layout_height="45dp">
 
                     <UIComponent.DonutProgress
                         android:id="@+id/home_circular_female"
@@ -284,7 +285,7 @@
                     <ImageView
                         android:id="@+id/home_img_female"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="25dp"
 
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/ic_female" />
@@ -317,8 +318,8 @@
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp">
+                    android:layout_width="45dp"
+                    android:layout_height="45dp">
 
                     <UIComponent.DonutProgress
                         android:id="@+id/home_circular_total"
@@ -335,7 +336,7 @@
                     <ImageView
                         android:id="@+id/home_img_total"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="25dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/ic_total_user" />
                 </FrameLayout>
